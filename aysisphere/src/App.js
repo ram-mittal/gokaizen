@@ -1,20 +1,27 @@
 import Navbar from "./components/navbar.js";
+import Lefttext from "./components/lefttextbar.js"
+import Social from "./components/socials.js"
 
 function App() {
   return (
 
     <div>
+    <Navbar/>
+    <div className="flex items-center justify-between h-screen bg-black">
+    <Lefttext/>
 
-      <Navbar/>
 
-    <div className="flex items-center justify-center h-screen bg-black">
-       <div className="w-[900px] h-[900px] bg-white fixed rounded-full -z-10"></div>
-      <h1 className="font-extrabold text-5xl text-white"> We are <span className="text-blue-700" >Launching</span> Soon</h1>
+      <div>
+        <h2 className="text-white">We are <span className="text-violet-600">Launching</span> soon</h2>
+        <h1 className="font-extrabold text-5xl text-white">ALMOST  THERE</h1>
+        <h3 className="text-2xl text-white">You're Gonna Like Our Website</h3>
+      </div>
+
+     <Social/> 
+
     </div>
 
     </div>
-
-    
   );
 }
 
