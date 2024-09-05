@@ -1,17 +1,17 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPen, faPenNib } from '@fortawesome/free-solid-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookF, faInstagram, faXTwitter, faLinkedinIn} from '@fortawesome/free-brands-svg-icons' 
 
 const socials = () => {
   return (
     <div>
       <div className='flex flex-col p-20'>
-        <FontAwesomeIcon color='white' icon={faPen}/>
-        <FontAwesomeIcon color="white" icon={faEnvelope}/>
+        <FontAwesomeIcon color='white' icon={faFacebookF}/>
+        <FontAwesomeIcon color="white" icon={faInstagram}/>
+        <FontAwesomeIcon color="white" icon={faXTwitter}/>
+        <FontAwesomeIcon color="white" icon={faLinkedinIn}/>
       </div>
     </div>
   )
 }
-
 export default socials
