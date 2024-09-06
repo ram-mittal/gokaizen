@@ -8,7 +8,6 @@ function App() {
 
     <div>
     <Navbar/>
-
     <Circle/>
     <div className="flex items-center justify-between h-screen bg-black">
     <Lefttext/>
