@@ -5,7 +5,7 @@ import { faFacebookF, faInstagram, faXTwitter, faLinkedinIn} from '@fortawesome/
 const socials = () => {
   return (
     <div>
-      <div className='flex flex-col p-20'>
+      <div className='flex flex-col p-20 gap-10'>
         <FontAwesomeIcon color='white' icon={faFacebookF}/>
         <FontAwesomeIcon color="white" icon={faInstagram}/>
         <FontAwesomeIcon color="white" icon={faXTwitter}/>
