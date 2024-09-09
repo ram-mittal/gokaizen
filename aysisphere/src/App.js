@@ -2,6 +2,7 @@ import Navbar from "./components/navbar.js";
 import Lefttext from "./components/lefttextbar.js"
 import Social from "./components/socials.js"
 import Circle from "./components/circle.js"
+import Email from "./components/emailnotify.js"
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
       </div>
      <Social/> 
     </div>
+
+    <Email/>
 
     </div>
   );
