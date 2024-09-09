@@ -7,5 +7,4 @@ function emailnotify() {
     </div>
   )
 }
-
 export default emailnotify
