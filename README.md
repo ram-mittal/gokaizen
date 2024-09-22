@@ -1,8 +1,8 @@
 
 
-## AysiSphere Infotech - Coming Soon Page
+## AahrbitX - Coming Soon Page
 
-Welcome to the official repository of **AysiSphere Infotech**. This "Coming Soon" page is designed to announce the launch of our website and give users a sneak peek into the innovative solutions we are developing. Stay tuned as we gear up to empower small-scale industries with advanced technology!
+Welcome to the official repository of **AahrbitX**. This "Coming Soon" page is designed to announce the launch of our website and give users a sneak peek into the innovative solutions we are developing. Stay tuned as we gear up to empower small-scale industries with advanced technology!
 
 ## Features
 
@@ -43,13 +43,13 @@ Before getting started, ensure you have the following installed on your system:
    Open your terminal and clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/aysisphere-coming-soon.git
+   git clone https://github.com/your-username/AahrbitX.git
    ```
 
 2. **Navigate to the Project Directory**
 
    ```bash
-   cd aysisphere-coming-soon
+   cd AahrbitX
    ```
 
 3. **Install Dependencies**
@@ -93,7 +93,7 @@ This will create an optimized production build in the `/build` directory, ready 
 ## Project Structure
 
 ```bash
-aysisphere-coming-soon/
+AahrbitX/
 ├── src/
 │   ├── assets/
 │   ├── components/
@@ -138,6 +138,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any queries or issues, feel free to reach out:
 
-- **Email**: support@aysisphere.com
-- **Website**: [AysiSphere.com](#)
-- **LinkedIn**: [AysiSphere Infotech](#)
+- **Email**: support@aahrbitX.com
+- **Website**: [Aahrbitx.com](#)
+- **LinkedIn**: [AahrbitX](#)
