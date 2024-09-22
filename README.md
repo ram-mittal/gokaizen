@@ -43,7 +43,7 @@ Before getting started, ensure you have the following installed on your system:
    Open your terminal and clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/AahrbitX.git
+   git clone https://github.com/abinjustinkumaravel/AahrbitX.git
    ```
 
 2. **Navigate to the Project Directory**
