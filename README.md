@@ -139,5 +139,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For any queries or issues, feel free to reach out:
 
 - **Email**: support@aahrbitX.com
-- **Website**: [Aahrbitx.com](#)
-- **LinkedIn**: [AahrbitX](#)
