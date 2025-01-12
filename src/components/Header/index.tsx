@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import { InteractiveHoverButton } from "../ui/interactive-hover-button";
+import { ScrollProgress } from "../ui/scroll-progress";
 
 const Header = () => {
   // Navbar toggle
@@ -105,7 +107,7 @@ const Header = () => {
                   }`}
                 >
                   <ul className="block lg:flex lg:space-x-12">
-                    {menuData.map((menuItem, index) => (
+                    {menuData.slice(0, 4).map((menuItem, index) => (
                       <li key={index} className="group relative">
                         {menuItem.path ? (
                           <Link
@@ -165,18 +167,14 @@ const Header = () => {
                 >
                   Sign In
                 </Link>
-                <Link
-                  href="/signup"
-                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
-                >
-                  Sign Up
-                </Link>
+                <InteractiveHoverButton link="/signup" text="Sign Up" />
                 <div>
                   <ThemeToggler />
                 </div>
               </div>
             </div>
           </div>
+          <ScrollProgress className="absolute bottom-0" />
         </div>
       </header>
     </>
