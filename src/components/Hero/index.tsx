@@ -1,3 +1,4 @@
+import { HeroData } from "@/static/heroData";
 import Link from "next/link";
 
 const Hero = () => {
@@ -12,27 +13,23 @@ const Hero = () => {
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  Free and Open-Source Next.js Template for{" "}
-                  <span>Startup & SaaS</span>
+                  {HeroData.title}
                 </h1>
                 <p className=" mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  We are a cutting-edge tech company dedicated to empowering
-                  small-scale industries with <b>innovative AI solutions</b>,{" "}
-                  <b>software development</b>, and{" "}
-                  <b>online training programs</b>.
+                  {HeroData.subtitle}
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
-                    href="https://nextjstemplates.com/templates/saas-starter-startup"
+                    href=""
                     className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                    🔥 Get Pro
+                    {HeroData.primaryButtonText}
                   </Link>
                   <Link
-                    href="https://github.com/NextJSTemplates/startup-nextjs"
+                    href=""
                     className="inline-block rounded-xl bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                   >
-                    Star on GitHub
+                    {HeroData.secondaryButtonText}
                   </Link>
                 </div>
               </div>

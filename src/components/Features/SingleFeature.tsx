@@ -8,7 +8,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
     transition-colors duration-200 shadow-md selection:bg-white selection:text-black"
     >
       <div className="wow fadeInUp" data-wow-delay=".15s">
-        <div className="mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-md text-primary group-hover:text-white">
+        <div className="mb-6 flex h-[70px] w-[70px] p-3 items-center justify-center rounded-md text-primary group-hover:text-white">
           {icon}
         </div>
         <h3 className="mb-5 text-xl font-bold text-black group-hover:text-white dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">

@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const { keyframes } = require("motion");
+
 const colors = require("tailwindcss/colors");
 const {
   default: flattenColorPalette,

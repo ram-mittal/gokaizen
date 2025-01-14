@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
-  const isHiring = true;
+  const isHiring = false;
 
   return (
     <>

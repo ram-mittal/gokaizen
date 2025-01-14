@@ -21,6 +21,10 @@
   .header b {
     @apply text-primary selection:text-black selection:bg-white;
   }
+
+  .pricing-grids :nth-child(4) {
+    @apply col-start-2;
+  }
 }
 
 @layer components {

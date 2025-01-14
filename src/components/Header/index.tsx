@@ -107,7 +107,7 @@ const Header = () => {
                   }`}
                 >
                   <ul className="block lg:flex lg:space-x-12">
-                    {menuData.slice(0, 4).map((menuItem, index) => (
+                    {menuData.slice(0, 5).map((menuItem, index) => (
                       <li key={index} className="group relative">
                         {menuItem.path ? (
                           <Link
@@ -158,8 +158,23 @@ const Header = () => {
                       </li>
                     ))}
                   </ul>
+                  {/* Add Sign In and Sign Up Buttons */}
+                  <div className="mt-4 border-t border-gray-300 pt-4 dark:border-gray-700 lg:hidden">
+                    <Link
+                      href="/signin"
+                      className="block w-full px-4 py-2 text-center text-base font-medium text-dark hover:opacity-70 dark:text-white"
+                    >
+                      Sign In
+                    </Link>
+                    <InteractiveHoverButton
+                      className="block w-full px-4 py-2 text-center mt-2"
+                      link="/signup"
+                      text="Sign Up"
+                    />
+                  </div>
                 </nav>
               </div>
+
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <Link
                   href="/signin"
@@ -167,7 +182,11 @@ const Header = () => {
                 >
                   Sign In
                 </Link>
-                <InteractiveHoverButton link="/signup" text="Sign Up" />
+                <InteractiveHoverButton
+                  className="hidden md:block"
+                  link="/signup"
+                  text="Sign Up"
+                />
                 <div>
                   <ThemeToggler />
                 </div>
