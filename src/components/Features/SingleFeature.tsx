@@ -4,7 +4,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
   const { icon, title, paragraph } = feature;
   return (
     <div
-      className="w-full p-4 bg-secondary dark:bg-dark rounded-xl hover:bg-primary dark:bg-opacity-75 dark:hover:bg-primary group
+      className="w-full p-4 bg-secondary dark:bg-neutral-800 rounded-xl hover:bg-primary dark:bg-opacity-75 dark:hover:bg-neutral-950 group
     transition-colors duration-200 shadow-md selection:bg-white selection:text-black"
     >
       <div className="wow fadeInUp" data-wow-delay=".15s">

@@ -38,7 +38,13 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
               </div>
               <div className="w-full">
                 <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
-                  By {author.name}
+                  By{" "}
+                  <Link
+                    className="hover:text-primary"
+                    href={author.external_link}
+                  >
+                    {author.name}
+                  </Link>
                 </h4>
                 <p className="text-xs text-body-color">{author.designation}</p>
               </div>

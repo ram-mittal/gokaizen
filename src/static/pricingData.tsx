@@ -13,18 +13,18 @@ export const PricingData = {
         "IoT/SaaS tools trial with restricted features",
       ],
     },
-    {
-      title: "Lite Package",
-      price: "50,000",
-      span: "/month",
-      features: [
-        "Small EdgeTeam support (up to 3 members)",
-        "Single AI/Software use case tailored for basic automation",
-        "OaaS covering limited organizational modules (HR or finance) ",
-        "IoT solutions for small-scale operations",
-        "SaaS tools for task management and operational support",
-      ],
-    },
+    // {
+    //   title: "Lite Package",
+    //   price: "50,000",
+    //   span: "/month",
+    //   features: [
+    //     "Small EdgeTeam support (up to 3 members)",
+    //     "Single AI/Software use case tailored for basic automation",
+    //     "OaaS covering limited organizational modules (HR or finance) ",
+    //     "IoT solutions for small-scale operations",
+    //     "SaaS tools for task management and operational support",
+    //   ],
+    // },
     {
       title: "Pro Package",
       price: "1,00,000",

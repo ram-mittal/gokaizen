@@ -25,8 +25,8 @@ export const ServicesData = {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="#4A6CF7"
           id="Layer_1"
+          fill="#4A6CF7"
           data-name="Layer 1"
           viewBox="0 0 24 24"
         >

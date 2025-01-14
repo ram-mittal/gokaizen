@@ -17,7 +17,7 @@ export const InteractiveHoverButton = React.forwardRef<
       ref={ref}
       onClick={() => (location.href = props.link)}
       className={cn(
-        "group relative w-32 cursor-pointer overflow-hidden rounded-xl  bg-background p-2 text-center font-semibold border border-primary",
+        "group relative w-32 cursor-pointer overflow-hidden rounded-xl  bg-background p-2 text-center font-semibold border border-primary dark:border-primary-dark",
         className
       )}
       {...props}
@@ -25,11 +25,11 @@ export const InteractiveHoverButton = React.forwardRef<
       <span className="inline-block translate-x-1 transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-0">
         {text}
       </span>
-      <div className="absolute top-0 z-10 flex h-full w-full translate-x-12 items-center justify-center gap-2 text-primary-foreground opacity-0 transition-all duration-300 group-hover:-translate-x-1 group-hover:opacity-100 text-white">
+      <div className="absolute top-0 z-10 flex h-full w-full translate-x-12 items-center justify-center gap-2 text-primary-foreground opacity-0 transition-all duration-300 group-hover:-translate-x-1 group-hover:opacity-100 dark:bg-primary-dark dark:text-black text-white">
         <span>{text}</span>
         <ArrowRight />
       </div>
-      <div className="absolute left-[20%] top-[40%] h-2 w-2 scale-[1] rounded-full bg-primary transition-all duration-300 group-hover:left-[0%] group-hover:top-[0%] group-hover:h-full group-hover:w-full group-hover:scale-[1.8] group-hover:bg-primary"></div>
+      <div className="absolute left-[20%] top-[40%] h-2 w-2 scale-[1] rounded-full bg-primary dark:bg-primary-dark transition-all duration-300 group-hover:left-[0%] group-hover:top-[0%] group-hover:h-full group-hover:w-full group-hover:scale-[1.8] group-hover:bg-primary dark:group-hover:bg-primary-dark"></div>
     </button>
   );
 });
