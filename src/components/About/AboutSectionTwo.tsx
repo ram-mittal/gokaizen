@@ -3,18 +3,32 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const AboutSectionTwo = () => {
   const [index, setIndex] = useState(0);
 
   const svgArray = ["bike", "support", "upgrade"];
 
+  // Animation variants
+  const variants = {
+    initial: { opacity: 0, scale: 0.8, x: -200, y: -100 },
+    animate: { opacity: 1, scale: 1, x: 0, y: 0 },
+  };
+
   return (
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
-        <div className="-mx-4 flex flex-wrap items-center">
+        <div className="mx-4 flex flex-wrap items-center justify-center">
           <div className="w-full px-4 lg:w-1/2">
-            <div className="relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0 p-6">
+            <motion.div
+              key={index} // Change key to index to trigger re-mounting
+              className="relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0 p-6"
+              initial="initial"
+              animate="animate"
+              variants={variants}
+              transition={{ duration: 0.5 }} // Adjust duration as needed
+            >
               <Image
                 src={`/images/about/${svgArray[index]}.svg`}
                 alt="about image"
@@ -27,9 +41,9 @@ const AboutSectionTwo = () => {
                 fill
                 className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
               />
-            </div>
+            </motion.div>
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div className="w-full px-4 lg:w-[480px]">
             <div className="max-w-[470px] space-y-3 transition-colors duration-150">
               <div
                 className={cn(

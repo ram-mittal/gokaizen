@@ -5,14 +5,6 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: "#FFFFFF";
-
-    .dark {
-      --background: "#1D2430";
-    }
-  }
-
   body {
     font-family: "Inter", sans-serif;
     @apply selection:bg-primary selection:text-white;

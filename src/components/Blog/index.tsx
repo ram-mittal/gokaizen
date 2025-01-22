@@ -1,4 +1,5 @@
 import SectionTitle from "../Common/SectionTitle";
+import { InteractiveHoverButton } from "../ui/interactive-hover-button";
 import SingleBlog from "./SingleBlog";
 import blogData from "@/static/blogData";
 
@@ -11,7 +12,7 @@ const Blog = () => {
       <div className="container">
         <SectionTitle
           title="Our Latest Blogs"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="Stay ahead of the curve with our latest blog posts. We provide in-depth articles, case studies, and expert insights on technology, innovation, AI, and business strategies to help you transform and grow."
           center
         />
 
@@ -21,6 +22,11 @@ const Blog = () => {
               <SingleBlog blog={blog} />
             </div>
           ))}
+        </div>
+        <div className="flex justify-center w-full mt-12">
+          <div className="text-center w-52">
+            <InteractiveHoverButton link="/blog" text="More Blogs" />
+          </div>
         </div>
       </div>
     </section>

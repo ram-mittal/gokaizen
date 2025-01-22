@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "Transform your business with advanced IoT solutions, AI-powered tools, and tailored SaaS products like HRM, HMS, CRM, ERP, and CMS. Based in Nalloorkonam, Arumanai, Kanyakumari, Tamil Nadu, India, we deliver innovative tech solutions globally. Leverage our EdgeTeam for dedicated tech experts and OAAS for end-to-end operational support. Partner with the best AI, IoT, and software solution providers to enhance business efficiency and achieve seamless growth",
   openGraph: {
     type: "website",
-    url: "https://example.com",
+    url: "https://aahrbitx.in",
     title: "AarbhitX",
     description:
       "We are a cutting-edge tech company dedicated to empowering small-scale industries with innovative AI solutions, software development, and online training programs. Our mission is to revolutionize how businesses grow by equipping them with the tools and expertise needed to succeed in the digital age.",
