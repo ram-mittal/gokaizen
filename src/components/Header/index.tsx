@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import { InteractiveHoverButton } from "../ui/interactive-hover-button";
+import { ScrollProgress } from "../ui/scroll-progress";
 
 const Header = () => {
   // Navbar toggle
@@ -57,14 +59,14 @@ const Header = () => {
                 } `}
               >
                 <Image
-                  src="/images/logo/logo-2.svg"
+                  src="/aahrbitx_dark.svg"
                   alt="logo"
                   width={140}
                   height={30}
                   className="w-full dark:hidden"
                 />
                 <Image
-                  src="/images/logo/logo.svg"
+                  src="/aahrbitx_light.svg"
                   alt="logo"
                   width={140}
                   height={30}
@@ -105,7 +107,7 @@ const Header = () => {
                   }`}
                 >
                   <ul className="block lg:flex lg:space-x-12">
-                    {menuData.map((menuItem, index) => (
+                    {menuData.slice(0, 5).map((menuItem, index) => (
                       <li key={index} className="group relative">
                         {menuItem.path ? (
                           <Link
@@ -156,8 +158,23 @@ const Header = () => {
                       </li>
                     ))}
                   </ul>
+                  {/* Add Sign In and Sign Up Buttons */}
+                  <div className="mt-4 border-t border-gray-300 pt-4 dark:border-gray-700 lg:hidden">
+                    <Link
+                      href="/signin"
+                      className="block w-full px-4 py-2 text-center text-base font-medium text-dark hover:opacity-70 dark:text-white"
+                    >
+                      Sign In
+                    </Link>
+                    <InteractiveHoverButton
+                      className="block w-full px-4 py-2 text-center mt-2"
+                      link="/signup"
+                      text="Sign Up"
+                    />
+                  </div>
                 </nav>
               </div>
+
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <Link
                   href="/signin"
@@ -165,18 +182,18 @@ const Header = () => {
                 >
                   Sign In
                 </Link>
-                <Link
-                  href="/signup"
-                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
-                >
-                  Sign Up
-                </Link>
+                <InteractiveHoverButton
+                  className="hidden md:block"
+                  link="/signup"
+                  text="Sign Up"
+                />
                 <div>
                   <ThemeToggler />
                 </div>
               </div>
             </div>
           </div>
+          <ScrollProgress className="absolute bottom-0" />
         </div>
       </header>
     </>
