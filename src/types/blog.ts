@@ -1,10 +1,4 @@
-export type Author = {
-  name: string;
-  profile: string;
-  image: string;
-  designation: string;
-  external_link: string;
-};
+import { Author } from "./Author";
 
 export type Blog = {
   id: number;

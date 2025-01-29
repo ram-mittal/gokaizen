@@ -1,15 +1,5 @@
-import { Author, Blog } from "@/types/blog";
-
-const Authors: Author[] = [
-  {
-    name: "Abin Justinkumaravel",
-    image:
-      "https://miro.medium.com/v2/resize:fill:176:176/1*4GxdlQtFyGam2Ye62AZf4Q.jpeg",
-    designation: "AI Researcher",
-    profile: "https://medium.com/@abinj2003",
-    external_link: "https://medium.com/@abinj2003",
-  },
-];
+import { Blog } from "@/types/blog";
+import { Authors } from "./authorData";
 
 const blogData: Blog[] = [
   {

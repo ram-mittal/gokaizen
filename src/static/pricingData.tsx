@@ -1,4 +1,5 @@
 export const PricingData = {
+  id: "1",
   title: "",
   subtitle: "",
   package: [
@@ -14,6 +15,7 @@ export const PricingData = {
       ],
     },
     // {
+    //   id: "2",
     //   title: "Lite Package",
     //   price: "50,000",
     //   span: "/month",
@@ -26,6 +28,7 @@ export const PricingData = {
     //   ],
     // },
     {
+      id: "3",
       title: "Pro Package",
       price: "1,00,000",
       span: "/month",
@@ -38,6 +41,7 @@ export const PricingData = {
       ],
     },
     {
+      id: "4",
       title: "Premium Package",
       price: "2,50,000+",
       span: "/month",
