@@ -1,5 +1,4 @@
 import { HeroData } from "@/static/heroData";
-import Link from "next/link";
 import { GridBeam } from "../ui/grid-beams";
 
 const Hero = () => {
@@ -7,9 +6,9 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="relative h-screen  dark:bg-grid-white/[0.05] bg-grid-black/[0.07] flex items-center justify-center z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+        className="relative z-10  flex h-screen items-center justify-center overflow-hidden bg-white pb-16 pt-[120px] bg-grid-black/[0.07] dark:bg-dark dark:bg-grid-white/[0.05] md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
       >
-        <GridBeam className="header relative container z-50 flex items-center justify-center">
+        <GridBeam className="header container relative z-50 flex items-center justify-center">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
@@ -25,7 +24,7 @@ const Hero = () => {
           </div>
         </GridBeam>
 
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent from-60% to-white dark:to-black pointer-events-none" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent from-60% to-white dark:to-black" />
       </section>
     </>
   );

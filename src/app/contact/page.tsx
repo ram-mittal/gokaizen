@@ -4,9 +4,7 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact | AahrbitX",
-  description: "This is Contact Page for Startup Nextjs Template",
-  // other metadata
+  title: "Contact",
 };
 
 const ContactPage = () => {

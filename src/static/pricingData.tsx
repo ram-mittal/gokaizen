@@ -1,8 +1,10 @@
 export const PricingData = {
+  id: "1",
   title: "",
   subtitle: "",
   package: [
     {
+      id: "1",
       title: "Free Trial",
       price: "0",
       span: "(for 7 days)",
@@ -14,6 +16,7 @@ export const PricingData = {
       ],
     },
     // {
+    //   id: "2",
     //   title: "Lite Package",
     //   price: "50,000",
     //   span: "/month",
@@ -26,6 +29,7 @@ export const PricingData = {
     //   ],
     // },
     {
+      id: "3",
       title: "Pro Package",
       price: "1,00,000",
       span: "/month",
@@ -38,6 +42,7 @@ export const PricingData = {
       ],
     },
     {
+      id: "4",
       title: "Premium Package",
       price: "2,50,000+",
       span: "/month",

@@ -1,6 +1,6 @@
-import { Blog } from "@/types/blog";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { Blog } from "@/types/blog";
 
 const SingleBlog = ({ blog }: { blog: Blog }) => {
   const { title, image, paragraph, author, external_link, tags, publishDate } =
@@ -30,7 +30,10 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
             {paragraph}
           </p>
           <div className="flex items-center mt-6 border-t pt-6 border-body-color dark:border-white dark:border-opacity-10">
-            <div className="mr-5 flex items-center border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
+            <Link
+              href={`/team/${author.id}`}
+              className="group/author mr-5 flex items-center border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5"
+            >
               <div className="mr-4">
                 <div className="relative h-10 w-10 overflow-hidden rounded-full">
                   <Image src={author.image} alt="author" fill />
@@ -39,16 +42,13 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
               <div className="w-full">
                 <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
                   By{" "}
-                  <Link
-                    className="hover:text-primary"
-                    href={author.external_link}
-                  >
+                  <span className="group-hover/author:text-primary">
                     {author.name}
-                  </Link>
+                  </span>
                 </h4>
                 <p className="text-xs text-body-color">{author.designation}</p>
               </div>
-            </div>
+            </Link>
             <div className="inline-block">
               <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
                 Date

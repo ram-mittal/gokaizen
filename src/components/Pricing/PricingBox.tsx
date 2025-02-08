@@ -9,7 +9,7 @@ const PricingBox = (props: {
   const { price, duration, packageName, children } = props;
 
   return (
-    <div className="group w-[420px] relative border rounded-xl border-neutral-300 dark:border-neutral-800 dark:bg-black bg-white">
+    <div className="group relative w-[420px] rounded-xl border border-neutral-300 bg-white dark:border-neutral-800 dark:bg-black">
       <FlickeringGrid
         className="absolute inset-0 z-0 size-full opacity-35"
         squareSize={4}
@@ -18,13 +18,13 @@ const PricingBox = (props: {
         maxOpacity={0.5}
         flickerChance={0.2}
       />
-      <div className="relative flex flex-col z-10 rounded-xl px-8 py-10 shadow-three min-h-[680px]">
+      <div className="relative z-10 flex min-h-[680px] flex-col rounded-xl px-8 py-10 shadow-three">
         <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
           <h3 className="mb-2 text-xl font-bold text-dark dark:text-white">
             {packageName}
           </h3>
           <h4 className="price mb-2 text-[32px] font-bold text-black dark:text-white">
-            $<span className="amount">{price}</span>
+            &#8377;<span className="amount">{price}</span>
             <span className="time text-lg font-medium text-body-color">
               &nbsp;{duration}
             </span>

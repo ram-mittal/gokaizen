@@ -33,13 +33,7 @@ const AboutSectionTwo = () => {
                 src={`/images/about/${svgArray[index]}.svg`}
                 alt="about image"
                 fill
-                className="drop-shadow-three dark:hidden dark:drop-shadow-none"
-              />
-              <Image
-                src={`/images/about/${svgArray[index]}.svg`}
-                alt="about image"
-                fill
-                className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
+                className="drop-shadow-three dark:drop-shadow-none"
               />
             </motion.div>
           </div>

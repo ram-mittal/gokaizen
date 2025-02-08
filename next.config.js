@@ -15,6 +15,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "miro.medium.com",
       },
+      {
+        protocol: "https",
+        hostname: "karthikeyanj.netlify.app",
+      },
     ],
   },
 };

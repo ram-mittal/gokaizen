@@ -57,10 +57,10 @@ const Pricing = () => {
         <div className="flex items-center justify-evenly flex-wrap gap-x-6 gap-y-10">
           {PricingData.package.map((pricing) => (
             <PricingBox
+              key={pricing.id}
               packageName={pricing.title}
               duration={pricing.span}
               price={pricing.price}
-              key={pricing.price}
             >
               {pricing.features.map((feature) => (
                 <OfferList text={feature} status="active" />
