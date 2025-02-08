@@ -4,6 +4,7 @@ export const PricingData = {
   subtitle: "",
   package: [
     {
+      id: "1",
       title: "Free Trial",
       price: "0",
       span: "(for 7 days)",

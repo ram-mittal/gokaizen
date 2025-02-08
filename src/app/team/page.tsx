@@ -1,6 +1,11 @@
 import { getAllAuthorsLinks } from "@/static/authorData";
+import { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Team",
+};
 
 function MembersPage() {
   const authors = getAllAuthorsLinks();

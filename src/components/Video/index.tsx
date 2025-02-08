@@ -1,15 +1,7 @@
-"use client";
-
-import Image from "next/image";
-import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
-
-import ModalVideo from "react-modal-video";
 import { HeroVideoDialog } from "../ui/hero-video-dialog";
 
 const Video = () => {
-  const [isOpen, setOpen] = useState(false);
-
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -26,16 +18,9 @@ const Video = () => {
               <div className="relative aspect-[77/40] items-center justify-center">
                 <div className="relative">
                   <HeroVideoDialog
-                    className="dark:hidden block"
+                    className="block"
                     animationStyle="from-center"
-                    videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
-                    thumbnailSrc="/images/video/video.png"
-                    thumbnailAlt="Hero Video"
-                  />
-                  <HeroVideoDialog
-                    className="hidden dark:block"
-                    animationStyle="from-center"
-                    videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
+                    videoSrc="https://www.youtube.com/embed/Z-WVUlWRxzc?si=1CPcj9q-LTN7vNdk"
                     thumbnailSrc="/images/video/video.png"
                     thumbnailAlt="Hero Video"
                   />

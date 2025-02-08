@@ -39,7 +39,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary  scale-110 hover:scale-125 transition-transform duration-150"
+                    className="mr-6 scale-110 text-body-color transition-transform duration-150  hover:scale-125 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
                       width="18"
@@ -59,7 +59,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary scale-110 hover:scale-125 transition-transform"
+                    className="mr-6 scale-110 text-body-color transition-transform duration-300 hover:scale-125 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
                       width="18"
@@ -81,7 +81,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary scale-110 hover:scale-125 transition-transform"
+                    className="mr-6 scale-110 text-body-color transition-transform duration-300 hover:scale-125 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
                       width="18"
@@ -97,7 +97,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary scale-110 hover:scale-125 transition-transform "
+                    className="scale-110 text-body-color transition-transform duration-300 hover:scale-125 hover:text-primary dark:text-body-color-dark dark:hover:text-primary "
                   >
                     <svg
                       width="17"
@@ -188,10 +188,10 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="/contact"
+                      href="/sitemap.xml"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Open Support Ticket
+                      Sitemap
                     </Link>
                   </li>
                   <li>
@@ -209,7 +209,7 @@ const Footer = () => {
                     >
                       Careers
                       {isHiring && (
-                        <span className="ml-4 text-white bg-primary rounded-xl px-4 py-1">
+                        <span className="ml-4 rounded-xl bg-primary px-4 py-1 text-white">
                           Hiring
                         </span>
                       )}
