@@ -7,7 +7,7 @@ import Contact from "@/components/Contact";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
-import Testimonials from "@/components/Testimonials";
+import AnimatedTestimonials from "@/components/Testimonials/AnimatedTestimonial";
 import Video from "@/components/Video";
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
       <Brands />
       <AboutSectionOne />
       <AboutSectionTwo />
-      <Testimonials />
+      <AnimatedTestimonials />
       <Pricing />
       <Blog />
       <Contact />

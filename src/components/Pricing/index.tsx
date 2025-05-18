@@ -54,7 +54,7 @@ const Pricing = () => {
           </div>
         </div> */}
 
-        <div className="flex items-center justify-evenly flex-wrap gap-x-6 gap-y-10">
+        <div className="flex flex-wrap items-stretch justify-evenly gap-x-6 gap-y-10">
           {PricingData.package.map((pricing) => (
             <PricingBox
               key={pricing.id}
@@ -62,8 +62,12 @@ const Pricing = () => {
               duration={pricing.span}
               price={pricing.price}
             >
-              {pricing.features.map((feature) => (
-                <OfferList text={feature} status="active" />
+              {pricing.features.map((feature, index) => (
+                <OfferList
+                  key={`feature-${index}`}
+                  text={feature}
+                  status="active"
+                />
               ))}
             </PricingBox>
           ))}

@@ -19,6 +19,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "karthikeyanj.netlify.app",
       },
+      {
+        protocol: "https",
+        hostname: "freetools.seobility.net",
+      },
+      {
+        protocol: "https",
+        hostname: "mfudfrexjmgxidwugcyw.supabase.co",
+      },
     ],
   },
 };

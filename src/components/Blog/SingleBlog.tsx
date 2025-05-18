@@ -17,19 +17,19 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
           </span>
           <Image src={image} alt="image" fill className="object-cover" />
         </Link>
-        <div className="p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8 flex flex-col h-[340px]">
+        <div className="flex h-[340px] flex-col p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
           <h3>
             <Link
               href={external_link}
-              className="mb-4 block text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl"
+              className="mb-4 line-clamp-2 block text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl"
             >
               {title}
             </Link>
           </h3>
-          <p className="flex-grow  border-opacity-10  text-base font-medium text-body-color  line-clamp-3">
+          <p className="line-clamp-3  flex-grow  border-opacity-10 text-base font-medium  text-body-color">
             {paragraph}
           </p>
-          <div className="flex items-center mt-6 border-t pt-6 border-body-color dark:border-white dark:border-opacity-10">
+          <div className="mt-6 flex items-center border-t border-body-color pt-6 dark:border-white dark:border-opacity-10">
             <Link
               href={`/team/${author.id}`}
               className="group/author mr-5 flex items-center border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5"

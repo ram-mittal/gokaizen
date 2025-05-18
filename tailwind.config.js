@@ -40,6 +40,9 @@ module.exports = {
       // => @media (min-width: 1400px) { ... }
     },
     extend: {
+      fontFamily: {
+        sora: ["Sora", "sans-serif"],
+      },
       colors: {
         current: "currentColor",
         transparent: "transparent",
@@ -111,11 +114,14 @@ module.exports = {
         {
           "bg-grid": (value) => ({
             backgroundImage: `url("${svgToDataUri(
-              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`,
             )}")`,
           }),
         },
-        { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
+        {
+          values: flattenColorPalette(theme("backgroundColor")),
+          type: "color",
+        },
       );
     },
   ],
@@ -124,7 +130,7 @@ module.exports = {
 function addVariablesForColors({ addBase, theme }) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
   );
 
   addBase({
