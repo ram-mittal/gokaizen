@@ -1,47 +1,101 @@
-import { templateData } from "@/static/templatesData";
-import Image from "next/image";
-import { notFound } from "next/navigation";
 import React from "react";
+import Image from "next/image";
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+
+import { templateData } from "@/static/templatesData";
+import PriceBreakdown from "./components/price-breakdown";
+import ImageSection from "./components/ImageSection";
+import ActionButtons from "./components/action-buttons";
+import TemplatePoints from "./components/template-points";
+import SecondaryActions from "./components/secondary-actions";
 
 type Props = {
   params: Promise<{ template: string }>;
 };
 
-export async function generateStaticProps({ params }: Props) {
+export async function generateStaticParams() {
+  return templateData
+    .filter((template) => !template.comingSoon)
+    .map((template) => ({
+      template: template.id,
+    }));
+}
+
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
   const { template: id } = await params;
-  const template = templateData.find((template) => template.id === id);
+  const template = templateData.find(
+    (template) => template.id === id && !template.comingSoon,
+  );
+
+  if (!template) {
+    return;
+  }
+
   return {
-    props: {
-      template,
+    title: template.title,
+    description: template.description,
+    openGraph: {
+      title: template.title,
+      description: template.description,
+      images: [
+        {
+          url: template.imageUrls.metaImage.src,
+          alt: template.imageUrls.metaImage.alt,
+        },
+      ],
     },
   };
-}
+};
 
 async function TemplatePage({ params }: Props) {
   const { template: id } = await params;
 
   const template = templateData.find((template) => template.id === id);
 
-  if (!template) {
+  if (!template || template.comingSoon) {
     notFound();
   }
 
+  const { imageUrls } = template;
+  const flatImages = [...imageUrls.illustrations, imageUrls.metaImage];
+
   return (
-    <div className="grid grid-cols-1 grid-rows-2 gap-4 md:grid-cols-2 md:grid-rows-1">
-      <div className="relative">
-        <Image
-          src={`/marketplace/${template.imageUrl}`}
-          alt={template.title}
-          width={700}
-          height={300}
-          className="rounded-lg"
-        />
-        <div className="absolute left-2 top-2">
-          <Image src={template.seobility} alt="" height={64} width={64} />
+    <>
+      <div className="relative grid min-h-screen grid-cols-1 grid-rows-[auto_auto] gap-8 md:grid-cols-[2fr_1fr] md:grid-rows-1">
+        <div className="h-fit">
+          <ImageSection images={flatImages} />
+          <div className="absolute left-2 top-2 hidden lg:block">
+            <Image src={template.seobility} alt="" height={64} width={64} />
+          </div>
+        </div>
+        <div className="w-full">
+          <div className="sticky top-24 flex flex-col ">
+            <div>
+              <h1 className="font-sora text-center text-3xl font-bold md:text-start">
+                {template.title}
+              </h1>
+              <p className="text-center  opacity-65 md:text-start">
+                {template.description}
+              </p>
+            </div>
+            {/* <div className="py-3">
+              <ColorTheme colors={template.colorSchema} />
+            </div> */}
+            <TemplatePoints template={template} />
+            <SecondaryActions template={template} />
+            <hr className="mb-6 opacity-35" />
+            <ActionButtons template={template} />
+            <div className="mt-6 opacity-80">
+              <p className="text-justify">{template.full_description}</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div>content</div>
-    </div>
+      <PriceBreakdown template={template} />
+    </>
   );
 }
 
