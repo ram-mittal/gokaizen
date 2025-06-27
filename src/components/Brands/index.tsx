@@ -38,22 +38,22 @@ type LogoType = {
 
 const Logos: Record<string, LogoType> = {
   tataSky: {
-    src: "/images/brands/tata.jpg",
+    src: "/images/clients/tata.jpg",
     alt: "Tata Sky",
     styles: { height: 'auto', width: '100%', objectFit: 'contain' }
   },
   icici: {
-    src: "/images/brands/icic.jpg",
+    src: "/images/clients/icic.jpg",
     alt: "ICICI Bank",
     styles: { height: 'auto', width: '100%', objectFit: 'contain' }
   },
   google360: {
-    src: "/images/brands/google.png",
+    src: "/images/clients/google.png",
     alt: "Google 360",
     styles: { height: 'auto', width: '100%', objectFit: 'contain' }
   },
   sosChildren: {
-    src: "/images/brands/sos.jpeg",
+    src: "/images/clients/sos.jpeg",
     alt: "SOS Children's Villages",
     styles: { height: 'auto', width: '100%', objectFit: 'contain' }
   }

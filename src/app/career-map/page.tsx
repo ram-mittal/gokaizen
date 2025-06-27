@@ -12,52 +12,39 @@ const CareerMapPage = () => {
   useEffect(() => {
     document.title = 'Career Map | Kaizen';
     
-    // Base URL for the application
-    const baseUrl = window.location.origin;
+    // Set the image path directly since we know where it should be
+    const imagePath = '/images/career/career-map.png';
     
-    // Try different image paths
-    const possiblePaths = [
-      `${baseUrl}/images/career/career-map.png`,
-      `${baseUrl}/_next/static/media/career-map.png`,
-      `${baseUrl}/career-map.png`,
-      "/images/career/career-map.png",
-      "/_next/static/media/career-map.png",
-      "/career-map.png"
-    ];
-    
-    // Try to find the correct image path
+    // Verify the image exists
     const checkImage = (path: string) => {
-      return new Promise<string | null>((resolve) => {
+      return new Promise<boolean>((resolve) => {
         const img = new window.Image();
         img.src = path;
-        img.onload = () => resolve(path);
-        img.onerror = () => resolve(null);
+        img.onload = () => resolve(true);
+        img.onerror = () => resolve(false);
       });
     };
 
-    const findImage = async () => {
-      for (const path of possiblePaths) {
-        try {
-          const result = await checkImage(path);
-          if (result) {
-            console.log('Found image at:', result);
-            // Use relative path for Next.js Image component
-            const relativePath = path.replace(baseUrl, '');
-            setImagePath(relativePath);
-            setIsLoading(false);
-            setImageError(false);
-            return;
-          }
-        } catch (error) {
-          console.error(`Error checking image at ${path}:`, error);
+    const verifyImage = async () => {
+      try {
+        const exists = await checkImage(imagePath);
+        if (exists) {
+          console.log('Found career map image at:', imagePath);
+          setImagePath(imagePath);
+          setImageError(false);
+        } else {
+          console.error('Career map image not found at:', imagePath);
+          setImageError(true);
         }
+      } catch (error) {
+        console.error('Error verifying career map image:', error);
+        setImageError(true);
+      } finally {
+        setIsLoading(false);
       }
-      console.error('Image not found at any of the following paths:', possiblePaths);
-      setIsLoading(false);
-      setImageError(true);
     };
 
-    findImage();
+    verifyImage();
   }, []);
 
   if (isLoading) {
