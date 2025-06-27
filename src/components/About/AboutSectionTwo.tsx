@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "motion/react";
 const AboutSectionTwo = () => {
   const [index, setIndex] = useState(0);
 
-  const svgArray = ["bike", "support", "upgrade"];
+  const svgArray = ["bike", "support", "upgrade"]; // These should be replaced with relevant Kaizen images
 
   const variants = {
     initial: { opacity: 0, scale: 0.6, x: -200, y: -200 },
@@ -43,9 +43,9 @@ const AboutSectionTwo = () => {
           <div className="w-full px-4 lg:w-[480px]">
             <div className="max-w-[470px] space-y-3 transition-colors duration-150">
               {[
-                "Flawless Execution",
-                "Dedicated Support",
-                "Tailored Innovation",
+                "Customer-Centric Approach",
+                "Results-Driven Strategy",
+                "Innovative Solutions"
               ].map((title, i) => (
                 <div
                   key={i}
@@ -64,11 +64,11 @@ const AboutSectionTwo = () => {
                   </h3>
                   <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
                     {i === 0 &&
-                      "Our custom solutions are designed to deliver seamless, bug-free performance, ensuring your business operations run smoothly and efficiently."}
+                      "At Kaizen, we place your customers at the heart of everything we do. Our continuous improvement philosophy ensures we create meaningful connections and deliver exceptional brand experiences."}
                     {i === 1 &&
-                      "With our expert team by your side, we provide unmatched support to help your business overcome challenges and achieve success effortlessly."}
+                      "We focus on delivering measurable results that drive business growth. Our data-driven approach ensures that every campaign and strategy is optimized for maximum impact and ROI."}
                     {i === 2 &&
-                      "Leveraging advanced technologies like AI, IoT, and SaaS, we craft solutions tailored to meet your unique business needs and goals."}
+                      "Staying ahead of market trends, we bring innovative and creative solutions to help your brand stand out in the competitive landscape and achieve sustainable success."}
                   </p>
                 </div>
               ))}

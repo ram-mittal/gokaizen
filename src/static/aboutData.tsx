@@ -5,7 +5,7 @@ export const AboutData = {
   points: [
     "Tailored AI and IoT Solutions",
     "Comprehensive Organization-as-a-Service (OaaS)",
-    "Scalable Software-as-a-Service (SaaS) Platforms",
+    "Custom Web & Mobile Applications",
     "Expert EdgeTeam for Business Growth",
     "Custom Software Development",
     "Tailored to Your Needs",
@@ -24,7 +24,7 @@ export const AboutData = {
     {
       title: "Tailored Innovation",
       description:
-        "Leveraging advanced technologies like AI, IoT, and SaaS, we craft solutions tailored to meet your unique business needs and goals",
+        "Leveraging advanced technologies like AI and IoT, we craft solutions tailored to meet your unique business needs and goals",
     },
   ],
 };

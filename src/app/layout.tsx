@@ -1,30 +1,72 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import ScrollToTop from "@/components/ScrollToTop";
+import { Metadata } from "next";
 import { Sora } from "next/font/google";
+import { Providers } from "./providers";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 import "../styles/index.css";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | AahrbitX°",
-    default: "AahrbitX°",
+    template: "%s | Kaizen",
+    default: "Kaizen - Premier Marketing Solutions",
   },
   description:
-    "Transform your business with advanced IoT solutions, AI-powered tools, and tailored SaaS products like HRM, HMS, CRM, ERP, and CMS. Based in Nalloorkonam, Arumanai, Kanyakumari, Tamil Nadu, India, we deliver innovative tech solutions globally. Leverage our EdgeTeam for dedicated tech experts and OAAS for end-to-end operational support. Partner with the best AI, IoT, and software solution providers to enhance business efficiency and achieve seamless growth",
-  metadataBase: new URL("https://aahrbitx.in"),
+    "Kaizen delivers innovative marketing solutions including customer acquisition, client servicing, and B2B/B2C marketing. Partner with us for strategic marketing campaigns that drive growth and engagement.",
+  metadataBase: new URL("https://kaizenorg.in"),
+  keywords: [
+    "marketing agency",
+    "customer acquisition",
+    "client servicing",
+    "B2B marketing",
+    "B2C marketing",
+    "mall events",
+    "road trips",
+    "digital marketing",
+    "marketing strategy",
+    "brand management"
+  ],
   openGraph: {
     type: "website",
-    url: "https://aahrbitx.in",
-    title: "AarbhitX",
-    description:
-      "AI solutions for streamlined operations, enhanced decisions, and scalable growth. We unlock your full potential with intelligent automation and data-driven insights",
-    siteName: "AarbhitX",
+    url: "https://kaizenorg.in",
+    title: "Kaizen Organization - Premier Marketing Solutions",
+    description: "Transform your brand with our comprehensive marketing solutions. Specializing in customer acquisition, client servicing, and strategic marketing campaigns.",
+    siteName: "Kaizen",
     images: [
       {
-        url: "https://k0wq6pnnph6kt8et.public.blob.vercel-storage.com/aahrbitx/aahrbitx_meta_images-DeG1eHIDn5ppeJXCaQgZV6zOPzRaqX.png",
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kaizen - Premier Marketing Solutions"
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kaizen Organization - Premier Marketing Solutions",
+    description: "Transform your brand with our comprehensive marketing solutions. Specializing in customer acquisition, client servicing, and strategic marketing campaigns.",
+    images: ["/images/twitter-card.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+  },
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#000000' },
+  ],
 };
 
 const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
@@ -48,5 +90,4 @@ export default function RootLayout({
   );
 }
 
-import { Providers } from "./providers";
-import { Metadata } from "next";
+

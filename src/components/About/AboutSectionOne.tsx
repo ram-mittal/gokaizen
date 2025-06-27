@@ -24,8 +24,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Empowering Startups, SMEs, and Enterprises"
-                paragraph="Our range of innovative tech services is designed to streamline your operations, improve efficiency, and position your business as a leader in your industry."
+                title="Continuous Improvement Philosophy"
+                paragraph="Kaizen is a dynamic company dedicated to building leaders in the diverse and colorful Indian market. Since 2005, we've been delivering exceptional services in customer acquisition, client servicing, and sales & marketing, always striving for continuous improvement."
                 mb="44px"
               />
 
@@ -39,20 +39,19 @@ const AboutSectionOne = () => {
                       <span className="flex size-[30px] flex-shrink-0 items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
                         {checkIcon}
                       </span>
-                      Tailored AI and IoT Solutions
+                      Comprehensive Customer Acquisition
                     </p>
                     <p className="mb-5 flex items-center text-lg gap-2 font-medium text-body-color">
                       <span className="flex size-[30px] flex-shrink-0 items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
                         {checkIcon}
                       </span>
-                      Comprehensive{" "}
-                      <abbr title="Organisation-as-a-service">OaaS</abbr>
+                      Expert Client Servicing
                     </p>
                     <p className="mb-5 flex items-center text-lg gap-2 font-medium text-body-color">
                       <span className="flex size-[30px] flex-shrink-0 items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
                         {checkIcon}
                       </span>
-                      Expert EdgeTeam for Business Growth
+                      Strategic Sales & Marketing
                     </p>
                   </div>
 
@@ -61,11 +60,10 @@ const AboutSectionOne = () => {
                       <span className="flex size-[30px] flex-shrink-0 items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
                         {checkIcon}
                       </span>
-                      Scalable <abbr title="Software-as-a-service">SaaS</abbr>{" "}
-                      Platforms
+                      Business to Business Solutions
                     </p>
-                    <List text="Custom Software Development" />
-                    <List text="Tailored to Your Needs" />
+                    <List text="Business to Customer Engagement" />
+                    <List text="Mall Events & Road Trips" />
                   </div>
                 </div>
               </div>

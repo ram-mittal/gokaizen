@@ -1,22 +1,20 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import Contact from "@/components/Contact";
-
+import ContactDetails from "@/components/Contact/ContactDetails";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Us | Kaizen",
+  description: "Get in touch with Kaizen. Find our contact information, office location, and business hours.",
 };
 
 const ContactPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Contact"
-        description="
-      Use the Below Forms to Connect with us"
+        pageName="Contact Us"
+        description="Reach out to us for any inquiries or to learn more about our services"
       />
-
-      <Contact />
+      <ContactDetails />
     </>
   );
 };

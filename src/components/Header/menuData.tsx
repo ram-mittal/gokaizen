@@ -9,82 +9,53 @@ const menuData: Menu[] = [
   },
   {
     id: 2,
-    title: "About",
+    title: "About Us",
     path: "/about",
     newTab: false,
   },
   {
     id: 3,
-    title: "Blog",
-    path: "/blog",
+    title: "Services",
+    path: "/services",
     newTab: false,
   },
   {
     id: 4,
-    title: "Marketplace",
-    path: "/marketplace",
+    title: "Our Team",
+    path: "/team",
     newTab: false,
   },
   {
     id: 5,
-    title: "Products",
-    path: "/products",
+    title: "Career Map",
+    path: "/career-map",
     newTab: false,
   },
   {
     id: 6,
-    title: "Pages",
+    title: "Resources",
     newTab: false,
     submenu: [
       {
-        id: 41,
-        title: "About Page",
-        path: "/about",
-        newTab: false,
-      },
-      {
         id: 42,
-        title: "Contact Page",
-        path: "/contact",
-        newTab: false,
-      },
-      {
-        id: 43,
-        title: "Blog Grid Page",
-        path: "/blog",
+        title: "Career Map",
+        path: "/career-map",
         newTab: false,
       },
       {
         id: 44,
-        title: "Blog Sidebar Page",
-        path: "/blog-sidebar",
+        title: "Testimonial",
+        path: "/testimonial",
         newTab: false,
-      },
-      {
-        id: 45,
-        title: "Blog Details Page",
-        path: "/blog-details",
-        newTab: false,
-      },
-      {
-        id: 46,
-        title: "Sign In Page",
-        path: "/signin",
-        newTab: false,
-      },
-      {
-        id: 47,
-        title: "Sign Up Page",
-        path: "/signup",
-        newTab: false,
-      },
-      {
-        id: 48,
-        title: "Error Page",
-        path: "/error",
-        newTab: false,
-      },
+      }
     ],
   },
+  {
+    id: 7,
+    title: "Contact",
+    path: "/contact",
+    newTab: false,
+  },
 ];
+
 export default menuData;

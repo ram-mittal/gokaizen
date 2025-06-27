@@ -16,7 +16,7 @@ const itemVariants: Variants = {
 };
 
 export default function SingleFeature({ feature }: { feature: Feature }) {
-  const { icon, title, paragraph } = feature;
+  const { icon, title, paragraph, description } = feature;
   return (
     <motion.div
       variants={itemVariants}
@@ -27,14 +27,16 @@ export default function SingleFeature({ feature }: { feature: Feature }) {
     selection:text-black hover:bg-primary dark:bg-neutral-800 dark:bg-opacity-75 dark:hover:bg-neutral-950"
     >
       <div>
-        <div className="mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-md p-3 text-primary group-hover:text-white">
-          {icon}
-        </div>
+        {icon && (
+          <div className="mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-md p-3 text-primary group-hover:text-white">
+            {icon}
+          </div>
+        )}
         <h3 className="mb-5 text-xl font-bold text-black group-hover:text-white dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
           {title}
         </h3>
         <p className="pr-[10px] text-base font-medium leading-relaxed text-body-color group-hover:text-neutral-200">
-          {paragraph}
+          {description || paragraph}
         </p>
       </div>
     </motion.div>

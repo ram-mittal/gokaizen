@@ -2,26 +2,46 @@ import { Author } from "@/types/Author";
 
 export const Authors: Author[] = [
   {
-    name: "Abin Justinkumaravel",
-    id: "abin-justinkumaravel",
-    image:
-      "https://miro.medium.com/v2/resize:fill:176:176/1*4GxdlQtFyGam2Ye62AZf4Q.jpeg",
-    designation: "AI Researcher",
-    external_link: "https://medium.com/@abinj2003",
+    name: "Rahul Sharma",
+    id: "rahul-sharma",
+    image: "/images/team/rahul-sharma.jpg",
+    designation: "Founder & CEO",
+    external_link: "#",
   },
   {
-    name: "Karthikeyan",
-    id: "karthikeyan",
-    image: "https://karthikeyanj.netlify.app/assets/karthikeyan-QrG062tz.png",
-    designation: "Frontend Team Lead",
-    external_link: "https://medium.com/@karthikeyanj1915",
+    name: "Priya Patel",
+    id: "priya-patel",
+    image: "/images/team/priya-patel.jpg",
+    designation: "Head of Client Services",
+    external_link: "#",
   },
   {
-    name: "Maneesh",
-    id: "maneesh",
-    image: "",
-    designation: "Backend Team Lead",
-    external_link: "https://medium.com/@abinj2003",
+    name: "Amit Kumar",
+    id: "amit-kumar",
+    image: "/images/team/amit-kumar.jpg",
+    designation: "Creative Director",
+    external_link: "#",
+  },
+  {
+    name: "Neha Gupta",
+    id: "neha-gupta",
+    image: "/images/team/neha-gupta.jpg",
+    designation: "Digital Marketing Head",
+    external_link: "#",
+  },
+  {
+    name: "Vikram Singh",
+    id: "vikram-singh",
+    image: "/images/team/vikram-singh.jpg",
+    designation: "Business Development Manager",
+    external_link: "#",
+  },
+  {
+    name: "Ananya Reddy",
+    id: "ananya-reddy",
+    image: "/images/team/ananya-reddy.jpg",
+    designation: "Event Strategist",
+    external_link: "#",
   },
 ];
 

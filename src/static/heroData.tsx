@@ -1,7 +1,7 @@
 export const HeroData = {
-  title: "We Empower Businesses with Innovative AI Solutions",
+  title: "Continuous Improvement with Kaizen",
   subtitle:
-    "AI solutions for streamlined operations, enhanced decisions, and scalable growth. We unlock your full potential with intelligent automation and data-driven insights",
-  primaryButtonText: "🔥 Get Pro",
-  secondaryButtonText: "Star on GitHub",
+    "Empowering businesses with innovative sales and marketing solutions. We help you achieve sustainable growth through strategic customer acquisition, client servicing, and direct marketing excellence.",
+  primaryButtonText: "Our Services",
+  secondaryButtonText: "Contact Us",
 };

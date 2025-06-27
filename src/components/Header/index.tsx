@@ -52,27 +52,25 @@ const Header = () => {
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4 xl:mr-12">
-              <Link
-                href="/"
-                className={`header-logo block w-full ${
-                  sticky ? "py-5 lg:py-2" : "py-8"
-                } `}
-              >
-                <Image
-                  src="/aahrbitx_dark.svg"
-                  alt="logo"
-                  width={140}
-                  height={30}
-                  className="w-full dark:hidden"
-                />
-                <Image
-                  src="/aahrbitx_light.svg"
-                  alt="logo"
-                  width={140}
-                  height={30}
-                  className="hidden w-full dark:block"
-                />
-              </Link>
+              <div className={`${sticky ? 'py-2' : 'py-4'}`}>
+                <Link
+                  href="/"
+                  className="header-logo block w-full"
+                >
+                  <div className="relative inline-block">
+                    <div className="relative h-14 w-auto dark:rounded-lg dark:bg-white dark:p-1.5 dark:shadow-md">
+                      <Image
+                        src="/images/logo.png"
+                        alt="Kaizen Logo"
+                        width={200}
+                        height={56}
+                        className="h-full w-auto object-contain"
+                        priority
+                      />
+                    </div>
+                  </div>
+                </Link>
+              </div>
             </div>
             <div className="flex w-full items-center justify-between px-4">
               <div>
@@ -158,35 +156,11 @@ const Header = () => {
                       </li>
                     ))}
                   </ul>
-                  {/* Add Sign In and Sign Up Buttons */}
-                  <div className="mt-4 border-t border-gray-300 pt-4 dark:border-gray-700 lg:hidden">
-                    <Link
-                      href="/signin"
-                      className="block w-full px-4 py-2 text-center text-base font-medium text-dark hover:opacity-70 dark:text-white"
-                    >
-                      Sign In
-                    </Link>
-                    <InteractiveHoverButton
-                      className="block w-full px-4 py-2 text-center mt-2"
-                      link="/signup"
-                      text="Sign Up"
-                    />
-                  </div>
+
                 </nav>
               </div>
 
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <Link
-                  href="/signin"
-                  className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
-                >
-                  Sign In
-                </Link>
-                <InteractiveHoverButton
-                  className="hidden md:block"
-                  link="/signup"
-                  text="Sign Up"
-                />
                 <div>
                   <ThemeToggler />
                 </div>
